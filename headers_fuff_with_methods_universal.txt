@@ -4,6 +4,6 @@ ffuf -u https://ejemplo.com \
 -X METHOD \
 -H "HEADER: valor-prueba" \
 -H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
--fs 5452,5430,5409 \
+-ac \
 -mc all \
 -of csv -o headersvalid.csv
