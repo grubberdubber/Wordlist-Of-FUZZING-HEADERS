@@ -1,0 +1,9 @@
+ffuf -u https://ejemplo.com \
+-w /usr/share/wordlists/http_simple_methods_flat.txt:METHOD \
+-w /usr/share/wordlists/headers_wordlist_flat.txt:HEADER \
+-X METHOD \
+-H "HEADER: valor-prueba" \
+-H "User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" \
+-fs 5452,5430,5409 \
+-mc all \
+-of csv -o headersvalid.csv
